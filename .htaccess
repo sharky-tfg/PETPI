@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/PETPI/public/
+RewriteRule ^(.*)$ public/$1 [L]
