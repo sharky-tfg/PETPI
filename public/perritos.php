@@ -35,21 +35,28 @@ $esUsuario = $logueado && $_SESSION['usuario']['rol'] == 'usuario';
         </p>
         
         <?php if (!$logueado): ?>
-            <div class="card shadow-sm mt-4 mx-auto" style="max-width: 550px; background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); border: none;">
-                <div class="card-body p-4">
-                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
-                        <div>
-                            <h5 class="fw-bold mb-1">🔓 ¿Quieres adoptar?</h5>
-                            <p class="mb-0 text-muted small">Inicia sesión para ver todas las fotos</p>
+        <div class="row justify-content-center mt-5 pt-4">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-md-7 p-5">
+                            <h3 class="fw-bold mb-3">¡Únete a nuestra familia!</h3>
+                            <p class="text-muted mb-4">Regístrate gratis para adoptar, dar en adopción o ver todas las fotos de los perritos.</p>
+                            <div class="d-flex gap-3 flex-wrap">
+                                <a href="/PETPI/public/registro.php" class="btn btn-primary rounded-pill px-4 py-2">
+                                    <i class="bi bi-person-plus"></i> Crear cuenta
+                                </a>
+                                <a href="/PETPI/public/login.php" class="btn btn-outline-primary rounded-pill px-4 py-2">
+                                    <i class="bi bi-box-arrow-in-right"></i> Iniciar sesión
+                                </a>
+                            </div>
                         </div>
-                        <div>
-                            <a href="/PETPI/public/login.php" class="btn btn-primary btn-sm px-4 rounded-pill">Iniciar sesión</a>
-                            <a href="/PETPI/public/registro.php" class="btn btn-outline-primary btn-sm px-4 rounded-pill">Registrarse</a>
-                        </div>
+                     
                     </div>
                 </div>
             </div>
-        <?php endif; ?>
+        </div>
+    <?php endif; ?>
     </div>
 
     <?php if (count($perritos) == 0): ?>
@@ -178,36 +185,7 @@ $esUsuario = $logueado && $_SESSION['usuario']['rol'] == 'usuario';
 
     <?php endif; ?>
 
-    <!-- Seccion para invitados al final -->
-    <?php if (!$logueado): ?>
-        <div class="row justify-content-center mt-5 pt-4">
-            <div class="col-lg-8">
-                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
-                    <div class="row g-0">
-                        <div class="col-md-7 p-5">
-                            <h3 class="fw-bold mb-3">¡Únete a nuestra familia!</h3>
-                            <p class="text-muted mb-4">Regístrate gratis para adoptar, dar en adopción o ver todas las fotos de los perritos.</p>
-                            <div class="d-flex gap-3 flex-wrap">
-                                <a href="/PETPI/public/registro.php" class="btn btn-primary rounded-pill px-4 py-2">
-                                    <i class="bi bi-person-plus"></i> Crear cuenta
-                                </a>
-                                <a href="/PETPI/public/login.php" class="btn btn-outline-primary rounded-pill px-4 py-2">
-                                    <i class="bi bi-box-arrow-in-right"></i> Iniciar sesión
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-5 bg-primary d-flex align-items-center justify-content-center p-4" style="background: linear-gradient(135deg, #0d6efd, #0b5ed7);">
-                            <div class="text-center text-white">
-                                <div class="display-1 mb-3">🐾</div>
-                                <h4 class="fw-bold">+120 adopciones</h4>
-                                <p class="mb-0 opacity-75">Familias felices</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php endif; ?>
+   
 
 </div>
 
