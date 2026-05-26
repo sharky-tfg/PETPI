@@ -17,6 +17,21 @@
   --gradient: linear-gradient(135deg, #6366f1, #0ea5e9);
 }
 
+
+.btn-admin-premium {
+    background: #fbbf24;
+    color: #1e293b;
+    font-weight: 700;
+    padding: 8px 24px;
+    border-radius: 50px;
+    border: none;
+    transition: 0.2s;
+}
+
+.btn-admin-premium:hover {
+    background: #f59e0b;
+    color: #0f172a;
+}
 /* ============================================
    RESET Y BASE
    ============================================ */
